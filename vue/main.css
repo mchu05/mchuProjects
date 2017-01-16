@@ -1,0 +1,14 @@
+.shopping-trolley {
+  margin: 0 auto;
+}
+
+button {
+    background: none;
+    border: 0;
+    float: right;
+    margin-left: 5px;
+}
+
+ul li .AddToTray {
+  float: right;
+}
