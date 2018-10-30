@@ -1,0 +1,16 @@
+<div class="app-cities-list">
+    <mat-card class="app-cities-list__current-coordinates"
+        (click)="currentClickHandler()">
+        <mat-card-header>
+          Current coordinates
+        </mat-card-header>
+    </mat-card>
+  
+    <app-city-info *ngFor="let cityData of citiesData"
+      [deleteButtonVisible]="true"
+      [weatherData]="cityData"
+      (cityDeleted)="cityDeletedHandler($event)"
+      (citySelected)="citySelectedHandler($event)">
+    </app-city-info>
+  </div>
+  

@@ -1,0 +1,22 @@
+<mat-card *ngIf="weatherData" class="app-city-info" (click)="citySelectedHandler()">
+    <mat-card-header class="app-city-info__header">
+      {{weatherData.name}}
+      <div class="app-city-info__header">
+          <button *ngIf="deleteButtonVisible"
+            class="app-city-info__delete-button"
+            (click)="cityDeletedHandler()"
+            mat-icon-button color="accent">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="app-city-info__text">
+          Country: {{weatherData.sys.country}}
+      </p>
+      <p class="app-city-info__text">
+          Lat: {{weatherData.coord.lat}} Lon: {{weatherData.coord.lon}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  

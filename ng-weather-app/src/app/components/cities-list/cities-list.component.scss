@@ -1,0 +1,11 @@
+.app-cities-list {
+    &__current-coordinates{
+      margin: 10px;
+  
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+  }
+  

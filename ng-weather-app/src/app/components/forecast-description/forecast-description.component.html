@@ -1,0 +1,8 @@
+<div class="app-forecast-description">
+    <ng-template [ngIf]="forecastData && forecastData.list">
+        <app-weather-item *ngFor="let weatherData of forecastData.list"
+          [weatherData]="weatherData">
+        </app-weather-item>
+    </ng-template>
+  </div>
+  

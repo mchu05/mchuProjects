@@ -1,0 +1,22 @@
+<div class="app-main">
+    <mat-toolbar color="primary" class="app-main__navbar">
+      <a mat-button> Weather App </a>
+    </mat-toolbar>
+  
+    <div class="app-main__container">
+      <div class="app-main__cities-list">
+        <app-cities-list (citySelected)="onCitySelected($event)"
+          (currentCoordinatesSelected)="onCurrentCoordinatesSelected($event)">
+        </app-cities-list>
+      </div>
+      <div class="app-main__main-content">
+          <app-weather-description></app-weather-description>
+      </div>
+    </div>
+    <div class="app-main__add-city-button">
+      <button mat-fab (click)="showCitySelector()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </div>
+  

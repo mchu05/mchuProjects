@@ -1,0 +1,14 @@
+<mat-card class="app-city-selector">
+    <mat-form-field class="example-full-width">
+      <input matInput type="text"
+      placeholder="City name"
+      [(ngModel)]="text"
+      (ngModelChange)="textChangeHandler()">
+    </mat-form-field>
+    <app-city-info *ngFor="let weatherData of citiesWeather"
+      [deleteButtonVisible]="false"
+      [weatherData]="weatherData"
+      (citySelected)="citySelectedHandler($event)">
+    </app-city-info>
+  </mat-card>
+  
